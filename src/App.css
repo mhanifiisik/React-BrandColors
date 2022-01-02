@@ -1,0 +1,395 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI" ,serif;
+}
+
+.App{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+}
+.sidebar{
+  position: relative;
+  width:100%;
+  border-right: 1px solid #e0e0e0;
+  padding: 30px;
+  display:flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  gap:25px;
+}
+.logo{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+.logo img{
+  width:40px;
+}
+.logo h2:hover{
+  color:#0099e5;
+  cursor:pointer;
+}
+.logo span{
+  font-weight: 400;
+}
+.sidebar p{
+  font-size:16px;
+  color:#607d8b;
+  line-height:24px;
+}
+.sidebar nav{
+  display:none;
+}
+.sidebar nav a{
+  font-weight:bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+.sidebar nav a:visited{
+  color:#263238;
+}
+.sidebar nav a:hover{
+  color:#0099e5;
+}
+.sidebarlink{
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  padding:15px 0;
+  display: none;
+}
+.sidebarlink p{
+  color:#263238;
+}
+.sidebarlink p span{
+  font-weight:bold;
+}
+.sidebarlink a{
+  color:#607d8b;
+  font-size: 14px;
+  line-height: 21px;
+}
+.sidebarlink a:hover{
+  color:#0099e5;
+}
+
+.Modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+  max-width: 720px;
+  padding:4vw;
+  background-color:white;
+  border:1px solid #263238;
+  z-index: 99;
+
+}
+.Overlay{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap:10px;
+ }
+ .Overlay p{
+   font-size:16px;
+   line-height:24px;
+   color:#607d8b;
+ }
+ .Overlay p span{
+  font-size:18px;
+  font-weight:bold;
+  color:#263238;
+
+}
+ .modal-close{
+   position: absolute;
+   top: 20px;
+   right: 20px;
+   width:25px;
+   height:25px;
+   background-color: gainsboro;
+   padding:3px;
+ }
+ .contact{
+   display: none;
+   position:absolute;
+   bottom:0;
+   left: 30px;
+ }
+ .contact nav{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   border:none;
+ }
+ .contact nav svg{
+  width:70px;
+  height:50px;
+  color:white;
+  padding: 12px 8px;
+  cursor: pointer;
+ }
+ .contact nav svg:hover{
+  transform: scale(1.1);  
+ }
+ .contact nav svg:nth-child(1){
+   background-color:#1da1f2;
+ }
+ .contact nav svg:nth-child(2){
+  background-color:#1877f2;
+}
+.contact nav svg:nth-child(3){
+  background-color:#0077b5;
+}
+.contact nav svg:nth-child(4){
+  background-color:#e60023;
+}
+.showcase{
+  flex: 1; 
+  overflow-y:auto;
+}
+.searchBar{
+  position: sticky;
+  top:0;
+  width: 100%;
+  height: 60px;
+  border:none;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50!important;
+  background-color:white;;
+  
+}
+.searchIcon{
+  display: none;
+  position:absolute;
+  left: 0;
+  margin-left: 10px;
+  width:20px;
+  height:20px;
+}
+.searchInput{
+flex:1;
+height:100%;
+padding-left: 25px;
+font-size: 16px;
+outline: none;
+border: none;
+}
+.main{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 30px;
+}
+.brand{
+  display:flex;
+  flex-direction:column;
+  justify-content: flex-start;
+  gap:15px;
+  padding:15px 15px 15px 15px;
+  margin-left: 15px;
+  border-bottom: 1px solid #e0e0e0;
+
+}
+.selected{
+  border:1px solid #0389ff !important;
+}
+.footer{
+  display:flex;
+  flex-direction:row;
+  justify-content: flex-start;
+  align-items:center;
+  gap:15px;
+  font-size:14px;
+  color:#607d8b;
+}
+.footer ul{
+  display:flex;
+  flex-direction:row;
+  justify-content: center;
+  align-items:center;
+  gap: 15px;
+  list-style: none;
+}
+.footer ul a{
+  text-decoration:none;
+  color:#607d8b;
+}
+.footer ul a:hover{
+  text-decoration:underline;
+}
+.brand-body{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  align-items: center;
+  gap: 10px;
+}
+.brand-body h1{
+  width: 20%;
+  color:#263238;
+  font-size:20px;
+  font-weight: 400;
+  cursor:pointer;
+}
+.brand-body ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  list-style: none;
+  gap:5px;
+  flex: 1;
+  flex-wrap: wrap;
+}
+.brand-body ul li{
+  display: flex;
+  flex-direction: row;
+  gap:10px;
+  justify-content:center;
+  align-items:center;
+  border: none;
+  height:60px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 70px;
+  padding:10px;
+  text-indent: -9999px;
+  border: 1px solid #e0e0e0;
+  cursor: pointer;
+  font-size:22px;
+}
+
+.selected-brand{
+  flex-grow: 1 !important;
+  text-indent: 0 !important;
+}
+.selected-footer{
+  display:block;
+}
+.icon{
+  display:none;
+}
+.brand-body ul li:hover .icon{
+  display:block;
+}
+.hidden{
+  display: none
+}
+.popup{
+  position: absolute;
+  right: 50px;
+  bottom:30px;
+  padding: 10px;
+  background-color:#1b2124;
+  color:white;
+}
+.Toolbar{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap:10px;
+  color:#607d8b;
+  margin-right: 15px;
+}
+.Toolbar-left,.Toolbar-right{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+text-align: center;
+gap: 5px;
+}
+.Toolbar p{
+  font-size:13px;
+  display:none;
+}
+.Toolbar svg{
+  font-size:21px;
+  cursor: pointer;
+}
+.Toolbar svg:hover{
+  color:#1b2124;
+}
+.top-text{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  
+}
+a:visited{
+  color:#607d8b;
+  text-decoration: none;
+}
+.select-icon{
+  padding: 5px;
+  background-color:rgba(255,255,255,0.8);
+  border-radius:6px;
+  border: 1px solid #607d8b;
+  outline:none;
+  color:#607d8b;
+}
+@media only screen and (min-width:768px){
+.App{
+    flex-direction: row;
+  }
+.sidebar{
+    position: relative;
+    width:330px;
+    height:100%;
+    border-right: 1px solid #e0e0e0;
+    padding: 30px;
+    display:flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    gap:25px;
+  }
+.sidebarlink{
+  display:block;
+}
+.sidebar nav{
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+  color:#263238;
+}
+.contact{
+  display: block;
+  position:absolute;
+  bottom:0;
+  left: 30px;
+}
+.searchIcon{
+  display: block;
+}
+.Toolbar p{
+  display:block;
+}
+.searchInput{
+  padding-left: 40px;
+  }
+  .searchBar{
+    border-top:none;
+  }
+}
